@@ -10,7 +10,7 @@ class OrderPage(BasePage):
         self.locators = OrderPageLocators()
 
     def open_order_page(self):
-        self.driver.get(Const.ORDER_PAGE)
+        self.open_url(Const.ORDER_PAGE)
 
     def input_name(self, name):
         self.wait_for_element_visibility(self.locators.INPUT_NAME).send_keys(name)
@@ -67,6 +67,9 @@ class OrderPage(BasePage):
 
     def tap_logo_scooter(self):
         self.wait_for_element_clickable(MainPageLocators.LOGO_SCOOTER).click()
+
+    def is_order_successful(self):
+        return self.wait_for_element_visibility(OrderPageLocators.ORDER_MODAL_HEADER_SUCCESSFULLY_PLACED)
 
     def get_current_url(self):
         return self.driver.current_url

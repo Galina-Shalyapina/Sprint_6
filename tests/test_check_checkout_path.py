@@ -40,4 +40,4 @@ class TestCheckoutPath:
         order_page.order_about_rental_page(date_piker, rental_period, color, comment)
         order_page.tap_order_final_button()
         order_page.tap_order_sure_button()
-        assert order_page.find_element(OrderPageLocators.ORDER_MODAL_HEADER_SUCCESSFULLY_PLACED)
+        assert order_page.is_order_successful()

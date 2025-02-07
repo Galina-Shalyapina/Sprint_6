@@ -11,7 +11,7 @@ class MainPage(BasePage):
         self.locators = MainPageLocators()
 
     def open_main_page(self):
-        self.driver.get(Const.MAIN_PAGE)
+        self.open_url(Const.MAIN_PAGE)
 
     def click_order_button_header(self):
         self.wait_for_element_clickable(self.locators.ORDER_BUTTON).click()
@@ -37,13 +37,8 @@ class MainPage(BasePage):
         self.wait_for_element_clickable(self.locators.LOGO_SCOOTER).click()
 
     def click_yandex_logo(self):
-        original_window = self.driver.current_window_handle
         self.wait_for_element_clickable(self.locators.LOGO_YANDEX).click()
-        WebDriverWait(self.driver, 10).until(EC.number_of_windows_to_be(2))
-        for window_handle in self.driver.window_handles:
-            if window_handle != original_window:
-                self.driver.switch_to.window(window_handle)
-                break
+        self.switch_to_new_window()
 
     def tap_order_header_button(self):
         self.click_order_button_header()
