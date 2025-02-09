@@ -1,7 +1,6 @@
 import allure
 from const import Const
 import pytest
-from locators.order_page_locators import OrderPageLocators
 
 
 class TestCheckoutPath:

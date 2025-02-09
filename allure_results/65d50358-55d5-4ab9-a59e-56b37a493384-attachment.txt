@@ -1,3 +1,0 @@
-Открытие главной страницы: https://qa-scooter.praktikum-services.ru/
-Текущий URL после открытия: https://qa-scooter.praktikum-services.ru/
-Содержимое страницы: <html lang="en"><head><meta charset="utf-8"><link rel="icon" href="/favicon.ico"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fff"><meta name="description" content="Web site created using create-react-app"><link rel="apple-touch-icon" href="/logo192.png"><link rel="manifest" href="/manifest.json"><title>undefined</title><link href="/static/css/2.40974bac.chunk.css" rel="stylesheet"><link href="/static/css/main.06b69249.chunk.css" rel="styl
